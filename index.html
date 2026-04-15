@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto viagens</title>
+</head>
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#Inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#Sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#Projeto" class="menu-link">Projeto</a>
+            </li>
+            <li>
+                <a href="#Contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+
+    </nav>
+    <main id="Inicio" class="Cabecalho">
+        
+            <img src="assets/caio.jpeg" alt="foto de Caio Lucas" class="foto-perfil">
+            <h1>Caio Lucas</h1>
+            <p>Desenvolverdor FullStack</p>
+       
+    </main>
+    
+    <section id="Sobre" class="Sobre">
+        <h2 class="Sobre-titulo">Sobre Mim</h2>
+        <Div class="Sobre-caixa">
+            <p class="Sobre-paragrafo">
+
+            </p>
+            <p class="cabecalho-sobre-titulo">Olá, sou um Desenvolverdor FullStack iniciante com vontade de aprender e afim de superar novos desáfios!</p>
+        </Div>
+    </section>
+
+    <section id="Projeto" class="Projeto">
+        <h2 class="Projeto-titulo"> Meus Projetos</h2>
+        <div class="projeto-caixa">
+
+        <div class="Projeto-card">
+            <img src="assets/projeto1.png" alt="projeto1" class="projeto-imagem">
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projeto">Loja de Carros</h3>
+            <p class="paragrafo-projeto">loja Virtual Moderna com animações suaves e desing responsivo de uma loja de carros</p>
+            </div>
+        </div>
+         
+        <div class="Projeto-card">    
+            <img src="assets/projeto2.png" alt="projeto2" class="projeto-imagem">
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projeto">Venda de viagens</h3>
+            <p class="paragrafo-projeto">loja Virtual Moderna com animações suaves e desing responsivo de uma loja de venda de passagens</p>
+            </div>
+        </div>
+
+
+        <div class="Projeto-card">   
+            <img src="assets/projeto3.png" alt="projeto3" class="projeto-imagem">
+            <div class="caixa-textos-projeto">
+            <h3 class="info-projeto">Pontos Turisticos</h3>
+            <p class="paragrafo-projeto">Site com pontos turisticos para visitar</p>
+            </div>
+        </div>    
+
+        </div>
+
+    </section>
+
+    <section id="Contato" class="Contato">
+        <h2 class="Contato-titulo"> Entre em Contato</h2>
+
+        <form class="formulario-contato" id="Formulario" onsubmit="Enviar Whattsap">
+            <div class="campo-form">
+            <input placeholder="Nome" class="campo-form" id="Nome"> 
+            </div>
+
+            <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar Whattsap</button>
+
+        </form>
+
+    </section>
+
+    <script>
+        const nome = document.getElementById('Nome');
+        const mensagem = document.getElementById('mensagem');
+        const telefone = '5585988933157'; 
+        
+        const texto = Olá me chamo ${Caio Lucas}, ${entro em contato assim que possivel, mas já pode me adiantar as informações e como posso lhe auxiliar:}';
+        const msgFormatada = encodeURIComponent(texto);
+
+        const url = `https://whatsa.me/5585988933157/?text=${msgFormatada}`;
+        window.open(url,);
+
+    </script>
+</body>
+</html>
