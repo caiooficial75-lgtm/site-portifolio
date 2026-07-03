@@ -144,13 +144,15 @@ h1 {
     overflow: hidden;
     transition: all 0.5s ease;
     cursor: pointer;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .projeto-imagem {
-    height: 200px;
     width: 100%;
+    height: 220px;
     object-fit: cover;
+    display: block;
 }
 
 .paragrafo-projeto {
@@ -162,6 +164,7 @@ h1 {
 
 .caixa-textos-projeto {
     padding: 1rem;
+    flex: 1;
 }
 
 .Projeto-titulo {
@@ -174,6 +177,17 @@ h1 {
 .Projeto-titulo:hover {
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
     transform: translateY(-10px) scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .projeto-caixa {
+        grid-template-columns: 1fr;
+        padding: 3rem 1rem;
+    }
+
+    .projeto-imagem {
+        height: 180px;
+    }
 }
 
 .info-projeto {
